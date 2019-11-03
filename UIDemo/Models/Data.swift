@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import SwiftUI
 
-//let landmarkData:[Landmark]=
+let landmarkData: [Landmark] = load("landmarkData.json")
 
 func load<T: Decodable>(_ fileName: String) -> T {
     let data: Data
