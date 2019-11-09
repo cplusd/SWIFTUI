@@ -8,38 +8,49 @@
 
 import SwiftUI
 
+
+//struct LandmarkList: View {
+//    @State var showFavoritesOnly = true
+//
+//    var body: some View {
+//        NavigationView {
+//            List {
+//                Toggle(isOn: $showFavoritesOnly) {
+//                    Text("Favorites only")
+//                }
+//
+//                ForEach(landmarkData) { landmark in
+//                    if !self.showFavoritesOnly || landmark.isFavorite {
+//                        NavigationLink(destination: ContentView(landmark: landmark)) {
+//                            LandmarkRow(landmark: landmark)
+//                        }
+//                    }
+//                }
+//            }
+//            .navigationBarTitle(Text("Landmarks"))
+//        }
+//    }
+//}
+
 struct LandmarkList: View {
-    @State var showFavoritesOnly: Bool = false
-    
+    @EnvironmentObject var userData: UserData
+
     var body: some View {
-        NavigationView{
-            
-            
-            ForEach(landmarkData){ item in
-                if !self.showFavoritesOnly || item.isFavorite {
-                
-                    NavigationLink(destination: ContentView(landmark: item)){
-                             LandmarkRow(landmark: item)
-                             }
+        NavigationView {
+            List {
+                Toggle(isOn: $userData.showFavoritesOnly) {
+                    Text("Favorites only")
                 }
-                   
+
+                ForEach(userData.landmarks) { landmark in
+                    if !self.userData.showFavoritesOnly || landmark.isFavorite {
+                        NavigationLink(destination: ContentView(landmark: landmark)) {
+                            LandmarkRow(landmark: landmark)
+                        }
+                    }
+                }
             }
-                        
             .navigationBarTitle(Text("Landmarks"))
         }
-        
-    }
-}
-
-struct LandmarkList_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(["iPhone XR"], id: \.self){ deviceName in
-        LandmarkList()
-            .previewDevice(PreviewDevice(rawValue: deviceName))
-            .previewDisplayName(deviceName)
-        }
-        
-
-        
     }
 }
