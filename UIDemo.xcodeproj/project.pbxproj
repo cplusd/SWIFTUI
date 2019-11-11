@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF039DBA23785515009DC670 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039DB923785515009DC670 /* CategoryHome.swift */; };
+		BF039DBC23785D32009DC670 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF039DBB23785D32009DC670 /* CategoryRow.swift */; };
 		BF1B69EF2346009F000DEBBA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B69ED2345F205000DEBBA /* MapView.swift */; };
 		BF4C9CC22363D836008048A1 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C9CC12363D836008048A1 /* Landmark.swift */; };
 		BF4C9CC42363DEF4008048A1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C9CC32363DEF4008048A1 /* Data.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF039DB923785515009DC670 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
+		BF039DBB23785D32009DC670 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		BF1B69ED2345F205000DEBBA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BF4C9CC12363D836008048A1 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		BF4C9CC32363DEF4008048A1 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				BFE674812376C53A0029EB13 /* BadgeBackground.swift */,
 				BFE674832376C9F70029EB13 /* BadgeSymbol.swift */,
 				BFE6748523779E090029EB13 /* RotatedBadgeSymbol.swift */,
+				BF039DB923785515009DC670 /* CategoryHome.swift */,
+				BF039DBB23785D32009DC670 /* CategoryRow.swift */,
 			);
 			path = UIDemo;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 				BF4C9CC42363DEF4008048A1 /* Data.swift in Sources */,
 				BF546F822339145E001DE46B /* AppDelegate.swift in Sources */,
 				BFE658CD2376A17A00FBFB99 /* Badge.swift in Sources */,
+				BF039DBA23785515009DC670 /* CategoryHome.swift in Sources */,
 				BF59B42423392777006552D8 /* CircleImage.swift in Sources */,
 				BF1B69EF2346009F000DEBBA /* MapView.swift in Sources */,
 				BF655A5E236D24D400DC4A4B /* LandmarkList.swift in Sources */,
+				BF039DBC23785D32009DC670 /* CategoryRow.swift in Sources */,
 				BFE674842376C9F70029EB13 /* BadgeSymbol.swift in Sources */,
 				BFE6748623779E090029EB13 /* RotatedBadgeSymbol.swift in Sources */,
 				BF546F842339145E001DE46B /* SceneDelegate.swift in Sources */,
