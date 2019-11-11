@@ -13,7 +13,6 @@ struct CategoryRow: View {
     var items: [Landmark]
     
     
-    
     var body: some View {
         
         
@@ -27,9 +26,14 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 0){
                            ForEach(self.items){landmark in
                             
+                            NavigationLink(
+                                destination: ContentView(
+                                    landmark: landmark
+                                )
+                            ){
+                              CategoryItem(landmark: landmark)
+                            }
                             
-                            
-                            CategoryItem(landmark: landmark)
                     }
                 }
             }.frame(height: 185)
@@ -46,11 +50,13 @@ struct CategoryItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             landmark.image
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
             Text(landmark.name)
                 .font(.caption)
+                .foregroundColor(.primary)
         }
         .padding(.leading, 15)
     }
